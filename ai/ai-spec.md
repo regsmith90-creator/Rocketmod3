@@ -37,7 +37,7 @@
 
 ### Feature Index
 
-Feature files live in `ai/features/`. `brand-theme.feature.md` and `contact-form-validation.feature.md` are written so far.
+Feature files live in `ai/features/`.
 
 - `brand-theme.feature.md` - client styling requests: blue `<h2>` titles, CEO section background, "1976" Ribbon emphasis, Company Highlights spacing, Visit Us bolding, Quote form header colors by building type
 - `contact-form-validation.feature.md` - Contact Us fields can't be blank; file upload accepts images only
