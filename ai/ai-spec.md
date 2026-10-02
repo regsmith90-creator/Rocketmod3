@@ -8,8 +8,6 @@
 - Any implementation must satisfy **both** this document and the relevant feature specification.
 - If the two documents conflict, resolve the conflict explicitly instead of guessing: update the feature specification, or this one.
 
-Items marked **TBD** could not be verified from the files. Items marked **PROPOSED** are not confirmed by the owner yet.
-
 ---
 
 ## 1. Project Identity
@@ -17,6 +15,7 @@ Items marked **TBD** could not be verified from the files. Items marked **PROPOS
 - **Project Name:** Rocket Elevators Website
 - **Short Description:** Update the existing Rocket Elevators marketing site per client requests.
 - **Project Type:** Static website (HTML, CSS, Bootstrap, JavaScript)
+- **Repository:** `git@github.com:regsmith90-creator/Rocketmod3.git` (remote `origin`; work on `dev`, main branch is `main`)
 - **Primary Users:** Visitors who browse the company pages, contact the company, subscribe to the newsletter, and request an elevator quote.
 
 ---
@@ -38,7 +37,7 @@ Items marked **TBD** could not be verified from the files. Items marked **PROPOS
 
 ### Feature Index
 
-Feature files live in `ai/features/`. None are written yet.
+Feature files live in `ai/features/`.
 
 - `brand-theme.feature.md` - client styling requests: blue `<h2>` titles, CEO section background, "1976" Ribbon emphasis, Company Highlights spacing, Visit Us bolding, Quote form header colors by building type
 - `contact-form-validation.feature.md` - Contact Us fields can't be blank; file upload accepts images only
@@ -102,7 +101,7 @@ Static multi-page site with no build step and no server code. Each HTML page loa
 ### Running the Project
 
 - **Install:** none (no `package.json` or build config)
-- **Run:** open the HTML files in a browser (how it is served: TBD)
+- **Run:** open `index.html` directly in a browser (no server needed)
 - **Test:** none (manual check in the browser)
 - **Environment variables:** none
 
@@ -125,13 +124,13 @@ Static multi-page site with no build step and no server code. Each HTML page loa
 ### Technical Constraints
 
 - Static files only; the site must work without a server-side endpoint.
-- Contact form (`index.html`): `<form id="contact_us" action="" method="post" enctype="multipart/form-data">`. POST endpoint: none (`action` is empty); real endpoint TBD.
+- Contact form (`index.html`): `<form id="contact_us" action="" method="post" enctype="multipart/form-data">`. POST endpoint: none (`action` is empty). Sending the form to a server is out of scope (no backend).
   - Fields (name): `action` (hidden, value "contact_send"), `name`*, `email`*, `company_name`, `phone`, `project_name`, `department`*, `project_desc`, `message`*, `attachment` (file). * = has `required`.
 - Fonts today:
   - `index.html` links Averia Serif Libre (css2 link).
   - `quote.html`, `residential.html`, `commercial.html` link Open Sans, Raleway, Lato.
   - Body font in CSS is `"Open Sans", Arial, Helvetica, sans-serif` (`layout.css`). Averia Serif Libre is not used in any CSS rule yet.
-- Supported browsers: TBD
+- Supported browsers: current versions of Chrome, Firefox, Safari and Edge, at desktop and mobile widths.
 
 ---
 
@@ -180,14 +179,14 @@ Static multi-page site with no build step and no server code. Each HTML page loa
 
 ## 6. Global Definition of Done
 
-- [ ] **Implementation completeness:** every acceptance criterion in the feature specification is met. (PROPOSED)
-- [ ] **Compliance with this specification:** no new libraries, no new inline styles, new CSS only in `custom.css`, new names in kebab-case. (PROPOSED)
-- [ ] **Testing:** the changed pages are opened in a browser and checked by hand; the browser console shows no new errors. (PROPOSED)
-- [ ] **Input validation:** any changed form blocks submission of invalid input and tells the user why. (PROPOSED)
-- [ ] **Error handling:** every user-facing error is shown as a message on the page, never only logged. (PROPOSED)
-- [ ] **Documentation:** the feature's file in `ai/features/` and the Feature Index above are up to date. (PROPOSED)
-- [ ] **Integration:** the four pages still load, and the menu, sliders, newsletter and quote calculator still work. (PROPOSED)
-- [ ] **Cleanup of temporary and debugging code:** no `console.log`, commented-out code or test files left behind. (PROPOSED)
+- [ ] **Implementation completeness:** every acceptance criterion in the feature specification is met.
+- [ ] **Compliance with this specification:** no new libraries, no new inline styles, new CSS only in `custom.css`, new names in kebab-case.
+- [ ] **Testing:** the changed pages are opened in a browser and checked by hand; the browser console shows no new errors.
+- [ ] **Input validation:** any changed form blocks submission of invalid input and tells the user why.
+- [ ] **Error handling:** every user-facing error is shown as a message on the page, never only logged.
+- [ ] **Documentation:** the feature's file in `ai/features/` and the Feature Index above are up to date.
+- [ ] **Integration:** the four pages still load, and the menu, sliders, newsletter and quote calculator still work.
+- [ ] **Cleanup of temporary and debugging code:** no `console.log`, commented-out code or test files left behind.
 
 ---
 
