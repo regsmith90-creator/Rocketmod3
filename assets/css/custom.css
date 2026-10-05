@@ -1,0 +1,121 @@
+/* ========================================
+ * BRAND THEME STYLING
+ * All new styling for Rocket Elevators brand
+ * This file overrides the theme defaults
+ * ======================================== */
+
+/* ========================================
+ * SECTION TITLES: Brand Blue Color
+ * Applied to all h2 headings across all pages
+ * ======================================== */
+
+h2 {
+  color: #0a65a0 !important;
+}
+
+/* Exception: Phone number h2 headings keep original color
+ * (Blue is hard to read on dark parallax background) */
+.section-phone h2 {
+  color: inherit !important;
+}
+
+/* ========================================
+ * HOME PAGE: CEO TESTIMONIAL SLIDE
+ * Blue background with white text for John Doe (CEO) slide
+ * ======================================== */
+
+/* Target the first testimonial slide (CEO John Doe)
+ * Gives it the brand blue background */
+.carousel-item:first-child {
+  background-color: #0a65a0 !important;
+}
+
+.carousel-item:first-child .testimonial-content,
+.carousel-item:first-child h3,
+.carousel-item:first-child p {
+  color: white !important;
+}
+
+/* ========================================
+ * HOME PAGE: "1976" FOUNDING YEAR EMPHASIS
+ * Make the year bold and light blue in the banner
+ * ======================================== */
+
+/* Wrap "1976" in a span with class "year-emphasis" in HTML
+ * This makes it bold and light blue to stand out */
+.year-emphasis {
+  color: #5aa9e6 !important;
+  font-weight: bold !important;
+}
+
+/* ========================================
+ * HOME PAGE: COMPANY HIGHLIGHTS SPACING
+ * Match the spacing between cards with Recent News section
+ * ======================================== */
+
+/* Services section (Company Highlights) card spacing
+ * Add margin-bottom to create consistent gaps between cards */
+#services .card {
+  margin-bottom: 30px;
+}
+
+/* ========================================
+ * HOME PAGE: VISIT US SECTION
+ * Bold address and phone, add opening hours list
+ * ======================================== */
+
+/* Make address text bold (label "Address:" is already bold) */
+.contact-address-value {
+  font-weight: bold !important;
+}
+
+/* Make phone number text bold (label "Phone:" is already bold) */
+.contact-phone-value {
+  font-weight: bold !important;
+}
+
+/* Opening hours list: standard bullet list */
+.opening-hours {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.opening-hours li {
+  margin-bottom: 5px;
+}
+
+/* Emphasize Saturday hours: bold and brand blue */
+.saturday-hours {
+  color: #0a65a0 !important;
+  font-weight: bold !important;
+}
+
+/* ========================================
+ * QUOTE FORM: CARD HEADER COLORS
+ * Headers change color based on selected building type
+ * ======================================== */
+
+/* Default quote card headers: keep original gray
+ * No class applied = no building type selected yet */
+.card-heading {
+  background-color: #f8f9fa !important;
+}
+
+/* Residential building type: light blue headers
+ * Class "building-residential" applied to #quote-form */
+#quote-form.building-residential .card-heading {
+  background-color: #d6e8f5 !important;
+}
+
+/* Commercial building type: light red headers
+ * Class "building-commercial" applied to #quote-form */
+#quote-form.building-commercial .card-heading {
+  background-color: #f8d7da !important;
+}
+
+/* Industrial building type: light gray headers
+ * Class "building-industrial" applied to #quote-form */
+#quote-form.building-industrial .card-heading {
+  background-color: #e2e3e5 !important;
+}
