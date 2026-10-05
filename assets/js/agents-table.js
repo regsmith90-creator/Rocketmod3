@@ -41,10 +41,21 @@ function filterAgents() {
 
 function sortAgents() {
   filteredAgents.sort((a, b) => {
-    let valueA = a[currentSort.column] || "";
-    let valueB = b[currentSort.column] || "";
-    let comparison = (typeof valueA === "string") ? valueA.localeCompare(valueB) : valueA - valueB;
-    return currentSort.direction === "desc" ? comparison * -1 : comparison;
+    let valueA = a[currentSort.column];
+    let valueB = b[currentSort.column];
+
+    // Numeric columns: fee, rating (sort as numbers, not strings)
+    if (currentSort.column === "fee" || currentSort.column === "rating") {
+      valueA = Number(valueA) || 0;
+      valueB = Number(valueB) || 0;
+      return currentSort.direction === "asc" ? valueA - valueB : valueB - valueA;
+    }
+
+    // String columns: first_name, last_name, region (alphabetical sort)
+    valueA = String(valueA || "").toLowerCase();
+    valueB = String(valueB || "").toLowerCase();
+    let comparison = valueA.localeCompare(valueB);
+    return currentSort.direction === "asc" ? comparison : comparison * -1;
   });
 }
 
