@@ -24,15 +24,15 @@ h2 {
  * Blue background with white text for John Doe (CEO) slide
  * ======================================== */
 
-/* Target the first testimonial slide (CEO John Doe)
+/* Target the first testimonial slide (CEO John Doe) in owl-carousel
  * Gives it the brand blue background */
-.carousel-item:first-child {
+.owl-testimonial .testimonial:first-child {
   background-color: #0a65a0 !important;
 }
 
-.carousel-item:first-child .testimonial-content,
-.carousel-item:first-child h3,
-.carousel-item:first-child p {
+.owl-testimonial .testimonial:first-child .testimonial-content,
+.owl-testimonial .testimonial:first-child cite,
+.owl-testimonial .testimonial:first-child p {
   color: white !important;
 }
 
@@ -41,10 +41,15 @@ h2 {
  * Make the year bold and light blue in the banner
  * ======================================== */
 
-/* Wrap "1976" in a span with class "year-emphasis" in HTML
- * This makes it bold and light blue to stand out */
+/* Banner text: white with "1976" blue */
+/* Keep the banner h2 text white instead of blue (blue is hard to read on dark background) */
+.banner-text {
+  color: white !important;
+}
+
+/* "1976" stands out: bold and bright blue */
 .year-emphasis {
-  color: #5aa9e6 !important;
+  color: #0a65a0 !important;
   font-weight: bold !important;
 }
 
