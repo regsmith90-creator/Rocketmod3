@@ -42,6 +42,7 @@ Feature files live in `ai/features/`.
 - `brand-theme.feature.md` - client styling requests: blue `<h2>` titles, CEO section background, "1976" Ribbon emphasis, Company Highlights spacing, Visit Us bolding, Quote form header colors by building type
 - `contact-form-validation.feature.md` - Contact Us fields can't be blank; file upload accepts images only
 - `top-agents.feature.md` - Residential page section listing agents rated 95 or more
+- `best-practices.feature.md` - engineering standards: code annotations, separation of concerns, responsive design verification
 
 ---
 
