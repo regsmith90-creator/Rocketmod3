@@ -24,6 +24,7 @@
         <!-- PAGE LEVEL SCRIPTS -->
         <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body class="smoothscroll enable-animation">
@@ -229,6 +230,29 @@
                 </div>
             </section>
             <!-- /PRICING -->
+
+            <!-- SERVICE AGENTS -->
+            <section id="agents-container" class="agents-section">
+                <div class="container">
+                    <header class="text-center mb-60">
+                        <h2>Service Agents</h2>
+                        <p class="lead font-lato">Find our top-rated service agents in your region.</p>
+                        <hr />
+                    </header>
+
+                    <div class="row mb-30">
+                        <div class="col-md-3">
+                            <label for="filter-region">Filter by Region:</label>
+                            <select id="filter-region" class="form-control">
+                                <option value="all">Loading...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="agents-section"></div>
+                </div>
+            </section>
+            <!-- /SERVICE AGENTS -->
 
             <!-- PARALLAX TESTIMONIALS-->
             <section id="parallax_testimonials" class="parallax parallax-1" style="background-image: url('./assets/images/rocketElevators/news6.jpg');">
@@ -442,5 +466,6 @@
         <!-- NEWSLETTER SCRIPT -->
     	<script src="./assets/js/newsletter.js"></script>
 		<!-- /NEWSLETTER SCRIPT -->
+    	<script src="./assets/js/agents-table.js"></script>
     </body>
 </html>

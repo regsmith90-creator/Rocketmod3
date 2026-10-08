@@ -98,15 +98,28 @@ function calculateElevators(type) {
  */
 function showFields() {
   const type = buildingType.value;
-  
+  const quoteForm = document.getElementById("quote-form");
+
   // Clear all inputs in the data sections
-  dataSections.querySelectorAll("input").forEach(input => 
+  dataSections.querySelectorAll("input").forEach(input =>
     input.type === "radio" ? input.checked = false : input.value = ""
   );
-  
+
+  // Remove all building type classes (start fresh)
+  quoteForm.classList.remove("building-residential", "building-commercial", "building-industrial");
+
     // Hide sections if no valid type selected
   if (!VALID_BUILDING_TYPES.includes(type)) return dataSections.style.display = "none";
-  
+
+  // Set the building type class for card header colors (matches CSS rules in custom.css)
+  if (type === "residential") {
+    quoteForm.classList.add("building-residential");
+  } else if (type === "commercial") {
+    quoteForm.classList.add("building-commercial");
+  } else if (type === "industrial") {
+    quoteForm.classList.add("building-industrial");
+  }
+
   // Show data sections
   dataSections.style.display = "block";
   

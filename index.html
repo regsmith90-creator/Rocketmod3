@@ -13,7 +13,7 @@
 		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
 		<!-- WEB FONTS : use %7C instead of | (pipe) -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
 		<!-- CORE CSS -->
 		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -29,6 +29,7 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body class="smoothscroll enable-animation">
@@ -423,7 +424,7 @@
 				<div class="container">
 
 					<div class="text-center">
-						<h2 class="fs-40 fw-300">Rocket Elevators has been in business since 1976</h2>
+						<h2 class="fs-40 fw-300 banner-text">Rocket Elevators has been in business since <span class="year-emphasis">1976</span></h2>
 						<a class="btn btn-blue btn-lg" href="quote.html">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 						&nbsp; OR &nbsp; 
 						<a class="btn btn-danger btn-lg" href="#contact">CONTACT US &nbsp; <i class="fa fa-angle-right"></i></a>
@@ -1075,11 +1076,11 @@
 
 									<div class="row">
 										<div class="col-md-6">
-											<label for="name">Full Name *</label>
+											<label for="name">Full Name </label>
 											<input type="text" value="" class="form-control" name="name" id="name" required>
 										</div>
 										<div class="col-md-6">
-											<label for="email">E-mail Address *</label>
+											<label for="email">E-mail Address</label>
 											<input required type="email" value="" class="form-control" name="email" id="email">
 										</div>
 									</div>
@@ -1099,7 +1100,7 @@
 											<input type="text" value="" class="form-control" name="project_name" id="project_name">
 										</div>
 										<div class="col-md-4">
-											<label for="department">Department *</label>
+											<label for="department">Department </label>
 											<select class="form-control pointer" name="department" id="department" required>
 												<option value="">--- Select ---</option>
 												<option value="Residential">Residential</option>
@@ -1115,7 +1116,7 @@
 									</div>
 									<div class="row">
 										<div class="col-md-12">
-											<label for="message">Message *</label>
+											<label for="message">Message </label>
 											<textarea required maxlength="10000" rows="6" class="form-control" name="message" id="message"></textarea>
 										</div>
 									</div>
@@ -1146,10 +1147,15 @@
 								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2729.4078764716423!2d-71.294418787417!3d46.835660071009144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb897d0e1cafe3f%3A0x9863b2d992c71670!2sCodeBoxx!5e0!3m2!1sen!2ssg!4v1681409744455!5m2!1sen!2ssg" width="360" height="620" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							<hr />
 							<p>
-								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 1165 Bd Lebourgneuf, Québec, QC G2K 2C9, Canada</span>
-								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1-800-887-2497">1-800-887-2497</a></span>
+								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> <strong class="contact-address-value">1165 Bd Lebourgneuf, Québec, QC G2K 2C9, Canada</strong></span>
+								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1-800-887-2497"><strong class="contact-phone-value">1-800-887-2497</strong></a></span>
 								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:codeboxx@codeboxx.com">codeboxx@codeboxx.com</a></span>
 							</p>
+							<!-- Opening hours list -->
+							<ul class="opening-hours">
+								<li>Monday - Friday: 8:00 AM - 8:00 PM</li>
+								<li><span class="saturday-hours">Saturday: 10:00 AM - 6:00 PM</span></li>
+							</ul>
 						</div>
 						<!-- /INFO -->
 
@@ -1263,5 +1269,6 @@
 		<!-- NEWSLETTER SCRIPT -->
     	<script src="./assets/js/newsletter.js"></script>
 		<!-- /NEWSLETTER SCRIPT -->
+    	<script src="./assets/js/contact-form.js"></script>
 	</body>
 </html>
